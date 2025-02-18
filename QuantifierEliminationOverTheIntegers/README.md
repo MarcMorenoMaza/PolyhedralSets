@@ -5,7 +5,7 @@ The QuantifierEliminationOverTheIntegers package is written in [Maple](https://w
 ## Installation Guide
 This package can be installed as follows:
 1. Clone or Download this repository (i.e. `git clone https://github.com/MarcMorenoMaza/PolyhedralSets.git`)
-2. Navigate to the repository folder (i.e. `cd ./QuantifierEliminationOverTheIntegers`)
+2. Navigate to the repository folder (i.e. `cd .PolyhedralSets/QuantifierEliminationOverTheIntegers`)
 3. Copy the full path of `master.mla` by running `pwd`
 4. Edit your Maple initialization file `~/.mapleinit` using `libname :=  "<path>", libname:`
 
