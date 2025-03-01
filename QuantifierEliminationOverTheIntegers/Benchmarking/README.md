@@ -1,4 +1,4 @@
-# Benchmarking for Quantifier Elimination over the Integers
+# Benchmarking for QuantifierEliminationOverTheIntegers
 
 This directory contains benchmarking scripts and input files designed to assess the performance of quantifier elimination methods implemented within the **PolyhedralSets** library.
 
