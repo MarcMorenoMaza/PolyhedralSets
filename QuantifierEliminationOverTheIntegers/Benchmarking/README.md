@@ -7,13 +7,13 @@ This directory contains benchmarking scripts and input files designed to assess 
 ## 📂 Directory Structure
 ```
 Benchmarks/
-│── Input/                      # Directory containing input test cases
-│── benchmarking.tst            # Maple script utilized for executing tests
-│── test-harness.tst            # Tests in Maple format
-│── Makefile                    # Automation script for executing benchmarks
-│── results_*.output            # Files containing raw execution results
-│── BENCHMARKING_results_*.output  # Files containing filtered benchmark-specific results
-│── crash_log.txt               # Log file capturing errors encountered during execution
+│── Input/                          # Directory containing input test cases
+│── benchmarking.tst                # Maple script utilized for executing tests
+│── test-harness.tst                # Tests in Maple format
+│── Makefile                        # Automation script for executing benchmarks
+│── results_*.output                # Files containing raw execution results
+│── BENCHMARKING_results_*.output   # Files containing filtered benchmark-specific results
+│── crash_log.txt                   # Log file capturing errors encountered during execution
 ```
 ---
 
