@@ -22,8 +22,8 @@ This package can be loaded in Maple by using `with(QuantifierEliminationOverZ);`
 
 Our main command is `QEoverZ(<formula>)`, which takes in a (parametric) quantified formula, applies *integer projection* to eliminate quantifiers. The output is either `true`, `false` or quantifier free formula in terms of the free variables, which makes the input formula true.
 
-We provide three *integer projection* methods: `integerpointdecomposition` (default), `numberofintegerpoints` and `cooper`, and two quantifier elimination modes: `onequantifieratatime` (default) and `byblockofquantifiers`. You can specify them as follows `QEoverZ(<formula>, method = <method name>, mode = <mode name>)`. 
+We provide two *integer projection* methods: `integerpointdecomposition` (default), `numberofintegerpoints`, and two quantifier elimination modes: `onequantifieratatime` and `byblockofquantifiers` (default). You can specify them as follows `QEoverZ(<formula>, method = <method name>, mode = <mode name>)`. 
 
-If no options are provided, the function runs with `method = integerpointdecomposition, mode = onequantifieratatime`.
+If no options are provided, the function runs with `method = integerpointdecomposition, mode = byblockofquantifiers`.
 
 For detailed examples and demonstrations, check the [QuantifierEliminationOverZ.mw](https://github.com/MarcMorenoMaza/PolyhedralSets/blob/main/QuantifierEliminationOverTheIntegers/QuantifierEliminationOverZ.mw) worksheet.

@@ -1,0 +1,2 @@
+&A([x1]), &A([x2]), &E([y])
+&implies(x1 + 1 < x2, &and(x1 < y, y < x2))

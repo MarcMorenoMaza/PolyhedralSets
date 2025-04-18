@@ -1,0 +1,2 @@
+&E([i]), &E([j]), &E([k]), &E([l])
+&and(0<=i, i <=m, 0<=j, j<=m, 0<=k, k<=m, 0<=l, l<=m, &or(&not(i=k), &not(j=l)), &not(i+j = k+l))
