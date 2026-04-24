@@ -9,7 +9,7 @@ This package can be installed as follows:
 3. Copy the full path of `master.mla` by running `pwd`
 4. Edit your Maple initialization file `~/.mapleinit` using `libname :=  "<path>", libname:`
 
-After successful installation `master.mla` will be integrated into your Maple environment. 
+After successful installation `master.mla` will be integrated into your Maple environment.  
 Note that `<path>` should be replaced with the full path to where `master.mla` is located.
 
 ## Code Demo
@@ -20,10 +20,28 @@ In addition to installing the package, you also need to have Maple installed to 
 ## Usage and Documentation
 This package can be loaded in Maple by using `with(QuantifierEliminationOverZ);`. This command also displays all available functions.
 
-Our main command is `QEoverZ(<formula>)`, which takes in a (parametric) quantified formula, applies *integer projection* to eliminate quantifiers. The output is either `true`, `false` or quantifier free formula in terms of the free variables, which makes the input formula true.
+Our main command is `QEoverZ(<formula>)`, which takes in a (parametric) quantified formula, applies *integer projection* to eliminate quantifiers. The output is either `true`, `false` or a quantifier-free formula in terms of the free variables, which makes the input formula true.
 
-We provide two *integer projection* methods: `integerpointdecomposition` (default), `numberofintegerpoints`, and two quantifier elimination modes: `onequantifieratatime` and `byblockofquantifiers` (default). You can specify them as follows `QEoverZ(<formula>, method = <method name>, mode = <mode name>)`. 
+We provide two *integer projection* methods: `integerpointdecomposition` (default), `numberofintegerpoints`, and two quantifier elimination modes: `onequantifieratatime` and `byblockofquantifiers` (default). You can specify them as follows: `QEoverZ(<formula>, method = <method name>, mode = <mode name>)`.
 
 If no options are provided, the function runs with `method = integerpointdecomposition, mode = byblockofquantifiers`.
+
+### PIP_to_QE
+
+The `PIP_to_QE` command provides an interface for solving Integer Linear Programming (ILP) and Parametric Integer Linear Programming (PILP) problems by internally reducing them to quantifier elimination over the integers.
+
+The syntax is:
+```
+PIP_to_QE(<objective>, <constraints>, <variables>, max_min = <max|min>, mode = <mode name>)
+```
+
+- `<objective>` — the linear objective function to optimize
+- `<constraints>` — a list of linear constraints defining the feasible region
+- `<variables>` — a list of the integer decision variables
+- `max_min = max` computes the maximum of the objective; `max_min = min` computes the minimum
+- `mode = locus` returns the parametric conditions (in terms of free parameters) under which the optimum exists, along with the optimal value
+- `mode = sample_points` returns concrete sample points that achieve the optimum
+
+If no `mode` is provided, the function defaults to `mode = locus`. If no `max_min` is provided, the function defaults to `max_min = max`.
 
 For detailed examples and demonstrations, check the [QuantifierEliminationOverZ.mw](https://github.com/MarcMorenoMaza/PolyhedralSets/blob/main/QuantifierEliminationOverTheIntegers/QuantifierEliminationOverZ.mw) worksheet.
