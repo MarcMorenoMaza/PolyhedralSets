@@ -1,0 +1,4 @@
+u := time();
+f := x_1 + x_2 + x_3, [-2*x_1 - 3*x_2 - 5*x_3 + p_0 - 4 = 0, 0 <= -x_2 + 2*p_1 + 3, 0 <= -x_3 + p_1, 0 <= x_2 - p_1, 0 <= 3*x_3 - p_1 + 2*p_2, 0 <= x_1 - x_3 + 5, 0 <= x_1, 0 <= -x_1 + p_2 + 2, 0 <= x_3 - 1], [x_1, x_2, x_3], [p_0, p_1, p_2], min;
+QuantifierEliminationOverZ:-PIP_to_QE(f);
+print("difficult takes:",time()-u);

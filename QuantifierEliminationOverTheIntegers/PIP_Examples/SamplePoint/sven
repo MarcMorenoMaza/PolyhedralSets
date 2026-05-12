@@ -1,0 +1,5 @@
+u := time();
+f := x_0, [-x_0 = 0, 0 <= p_0 - 4, 0 <= -p_0 + 10], [x_0], [p_0], min;
+ans := QuantifierEliminationOverZ:-PIP_to_QE(f);
+
+print("sven takes: ",time()- u);

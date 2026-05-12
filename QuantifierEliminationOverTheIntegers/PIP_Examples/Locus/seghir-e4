@@ -1,0 +1,5 @@
+u := time();
+f := x_1 + x_2 + x_3, [p_0 + p_1 - 1 = 0, 0 <= 7*x_1 - 4*x_2 - 10*x_3 - 2*p_1 - 1, 0 <= -4*x_1 + 2*x_2 + 5*x_3 + p_1 - 1, 0 <= 4*x_1 - 2*x_2 - 5*x_3 - p_1 + 5, 0 <= x_2 - 1, 0 <= -x_2 + 2*p_2, 0 <= x_3 - 1, 0 <= -x_3 + 3*p_2 + 2, 0 <= -98*x_1 + 56*x_2 + 140*x_3 + 28*p_1 + p_2 + 1, 0 <= 1], [x_1, x_2, x_3], [p_0, p_1, p_2], min;
+QuantifierEliminationOverZ:-PIP_to_QE(f,mode = locus);
+
+print("seghir-e4 takes: ",time()- u);

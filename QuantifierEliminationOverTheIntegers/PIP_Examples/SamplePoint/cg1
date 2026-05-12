@@ -1,0 +1,4 @@
+u := time();
+f := x_1 + x_2 + x_3, [0 <= p_0 - 1, 0 <= -p_0 + p_1, 0 <= x_2 - p_0, 0 <= -x_2 + p_0, 0 <= x_1 - p_1, 0 <= -x_1 + p_1, 0 <= x_2 - 1, 0 <= -x_2 + p_1, 0 <= -x_2 + x_3 - 1, 0 <= -x_3 + p_1], [x_1, x_2, x_3], [p_0, p_1], min;
+ans := QuantifierEliminationOverZ:-PIP_to_QE(f);
+print("cg1 takes:",time()-u);

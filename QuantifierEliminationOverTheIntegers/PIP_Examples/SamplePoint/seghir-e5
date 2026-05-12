@@ -1,0 +1,5 @@
+u := time();
+f := x_1 + x_2, [p_0 + p_1 - 4 = 0, 0 <= x_2 - 1, 0 <= x_2 + p_2, 0 <= 2*x_1 - 6*x_2 - p_1, 0 <= -3*x_1 + 5*x_2 + p_1, 0 <= 3*x_1 - 5*x_2 - p_1 + p_2 + 2, 0 <= -2*x_1 + 11*x_2 + p_1 + 4*p_2 + 3, 0 <= -3*x_1 + 4*x_2 + p_1 + 5, 0 <= 1], [x_1, x_2], [p_0, p_1, p_2], min;
+QuantifierEliminationOverZ:-PIP_to_QE(f);
+
+print("seghir-e5 takes: ",time()- u);

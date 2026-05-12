@@ -1,0 +1,5 @@
+u := time();
+f := x_1 + x_2, [p_0 + 2*p_1 + 2 = 0, 0 <= 2*x_1 + 2*x_2 + p_1 + p_2, 0 <= x_2 - 1, 0 <= -2*x_1 - 2*x_2 - p_1 - 1, 0 <= 7*x_1 + 6*x_2 + 3*p_1 - 1, 0 <= -6*x_1 - 7*x_2 - 3*p_1 + 3*p_3 + 1, 0 <= -7*x_1 - 6*x_2 - 3*p_1 + p_2 + 6*p_3 + 4, 0 <= p_3, 0 <= 1], [x_1, x_2], [p_0, p_1, p_2, p_3], min;
+QuantifierEliminationOverZ:-PIP_to_QE(f,mode = locus);
+
+print("seghir-e3 takes: ",time()- u);
